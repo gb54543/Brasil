@@ -81,6 +81,7 @@ h2 {
   text-decoration: none;
   border-radius: 6px;
   font-weight: bold;
+  cursor: pointer;
 }
 
 .buy:hover {
@@ -93,11 +94,33 @@ h2 {
   margin-top: 10px;
 }
 
-footer {
-  margin: 80px 0 30px;
+/* MODAL */
+.modal {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.8);
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-box {
+  background: #111;
+  padding: 25px;
+  border-radius: 10px;
+  max-width: 400px;
+  width: 90%;
   text-align: center;
-  color: #555;
-  font-size: 13px;
+}
+
+.modal-box h3 {
+  margin-top: 0;
+  color: #b30000;
+}
+
+.close {
+  margin-top: 15px;
+  background: #b30000;
 }
 </style>
 </head>
@@ -115,63 +138,44 @@ footer {
 <div class="container">
 
 <!-- OTIMIZAÇÃO -->
-<h2> Otimização</h2>
+<h2>Otimização</h2>
 <div class="cards">
   <div class="card">
     <h3>Otimização Completa</h3>
     <p>FPS, input lag, estabilidade e foco competitivo.</p>
     <div class="price">R$ 15,00</div>
-    <a class="buy" href="#">Comprar</a>
-    <div class="note">Você pode recerber descontos na sua compra caso entre no nosso discord!</div>
+    <div class="buy" onclick="abrirPagamento('Otimização Completa - R$15')">Comprar</div>
+    <div class="note">Pode receber desconto ao entrar no Discord</div>
   </div>
 </div>
 
 <!-- CURSOS -->
-<h2 style="margin-top:70px;"> Cursos Fortnite</h2>
+<h2 style="margin-top:70px;">Cursos Fortnite</h2>
 <div class="cards">
   <div class="card">
     <h3>Curso Starter</h3>
     <p>Base do competitivo, builds, edits e noção de jogo.</p>
     <div class="price">R$ 8,00</div>
-    <a class="buy" href="#">Comprar</a>
-    <div class="note">Inclui até 2 aulas adicionais ao entrar no nossso discord</div>
+    <div class="buy" onclick="abrirPagamento('Curso Starter - R$8')">Comprar</div>
+    <div class="note">Até 2 aulas extras no Discord</div>
   </div>
 
   <div class="card">
     <h3>Curso Avançado</h3>
-    <p>Game sense, decisões, fights, finais de jogo, calls e scrims.</p>
+    <p>Game sense, fights, finais, calls e scrims.</p>
     <div class="price">R$ 13,00</div>
-    <a class="buy" href="#">Comprar</a>
-    <div class="note">Inclui até 2 aulas adicionais ao entrar no nossso discord</div>
+    <div class="buy" onclick="abrirPagamento('Curso Avançado - R$13')">Comprar</div>
+    <div class="note">Até 2 aulas extras no Discord</div>
   </div>
 </div>
 
 <!-- GIFT CARDS -->
-<h2 style="margin-top:70px;"> Gift Cards Playstation</h2>
+<h2 style="margin-top:70px;">Gift Cards Playstation</h2>
 <div class="cards">
-  <div class="card">
-    <h3>R$ 35</h3>
-    <a class="buy" href="#">Comprar</a>
-    <div class="note">Você pode recerber descontos na sua compra caso entre no nosso discord!</div>
-  </div>
-
-  <div class="card">
-    <h3>R$ 60</h3>
-    <a class="buy" href="#">Comprar</a>
-    <div class="note">Você pode recerber descontos na sua compra caso entre no nosso discord!</div>
-  </div>
-
-  <div class="card">
-    <h3>R$ 100</h3>
-    <a class="buy" href="#">Comprar</a>
-    <div class="note">Você pode recerber descontos na sua compra caso entre no nosso discord!</div>
-  </div>
-
-  <div class="card">
-    <h3>R$ 150</h3>
-    <a class="buy" href="#">Comprar</a>
-    <div class="note">Você pode recerber descontos na sua compra caso entre no nosso discord!</div>
-  </div>
+  <div class="card"><h3>R$ 35</h3><div class="buy" onclick="abrirPagamento('Gift Card R$35')">Comprar</div></div>
+  <div class="card"><h3>R$ 60</h3><div class="buy" onclick="abrirPagamento('Gift Card R$60')">Comprar</div></div>
+  <div class="card"><h3>R$ 100</h3><div class="buy" onclick="abrirPagamento('Gift Card R$100')">Comprar</div></div>
+  <div class="card"><h3>R$ 150</h3><div class="buy" onclick="abrirPagamento('Gift Card R$150')">Comprar</div></div>
 </div>
 
 </div>
@@ -180,7 +184,26 @@ footer {
 © 2026 BRASIL — Todos os direitos reservados
 </footer>
 
+<!-- MODAL PAGAMENTO -->
+<div class="modal" id="modal">
+  <div class="modal-box">
+    <h3 id="produto"></h3>
+    <p><strong>OBS:</strong><br>Após pagar, guarde o comprovante.</p>
+    <p><strong>PIX:</strong><br>SEU_PIX_AQUI</p>
+    <div class="buy close" onclick="fechar()">Fechar</div>
+  </div>
+</div>
+
+<script>
+function abrirPagamento(produto) {
+  document.getElementById("produto").innerText = produto;
+  document.getElementById("modal").style.display = "flex";
+}
+
+function fechar() {
+  document.getElementById("modal").style.display = "none";
+}
+</script>
+
 </body>
 </html>
-
-
