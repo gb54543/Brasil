@@ -5,111 +5,102 @@
   <title>BRASIL</title>
 
   <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      font-family: Arial, Helvetica, sans-serif;
-    }
-
     body {
-      background: #0a0a0a;
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      background: #0b0b0b;
       color: white;
     }
 
-    nav {
-      background: #050505;
-      padding: 20px;
+    /* MENU */
+    .menu {
       display: flex;
       justify-content: space-between;
       align-items: center;
+      padding: 20px 40px;
+      background: #050505;
     }
 
-    nav h1 {
+    .menu h1 {
       color: #b30000;
+      margin: 0;
     }
 
-    nav ul {
-      list-style: none;
-      display: flex;
-      gap: 20px;
-    }
-
-    nav a {
+    .menu a {
       color: white;
       text-decoration: none;
+      margin-left: 20px;
       font-weight: bold;
     }
 
-    nav a:hover {
+    .menu a:hover {
       color: #b30000;
     }
 
-    main {
+    /* CONTEÚDO */
+    .container {
+      height: calc(100vh - 80px);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
       text-align: center;
-      padding: 120px 20px;
     }
 
-    main h2 {
+    .container h2 {
       font-size: 42px;
-      margin-bottom: 15px;
+      margin-bottom: 10px;
     }
 
-    main p {
+    .container p {
       color: #aaa;
-      margin-bottom: 40px;
+      margin-bottom: 30px;
     }
 
-    .btn-discord {
+    /* BOTÃO DISCORD */
+    .discord-btn {
       background: #5865F2;
       color: white;
-      padding: 15px 40px;
-      border-radius: 6px;
-      text-decoration: none;
+      padding: 15px 45px;
       font-size: 18px;
       font-weight: bold;
-      display: inline-block;
+      border-radius: 6px;
+      text-decoration: none;
+      cursor: pointer;
+      position: relative;
+      z-index: 9999;
     }
 
-    .btn-discord:hover {
+    .discord-btn:hover {
       background: #404EED;
-    }
-
-    footer {
-      background: #050505;
-      padding: 20px;
-      text-align: center;
-      color: #666;
     }
   </style>
 </head>
 
 <body>
 
-  <nav>
+  <div class="menu">
     <h1>BRASIL</h1>
-    <ul>
-      <li><a href="index.html">Início</a></li>
-      <li><a href="staff.html">Staff</a></li>
-      <li><a href="campeonato.html">Campeonato</a></li>
-    </ul>
-  </nav>
+    <div>
+      <a href="index.html">Início</a>
+      <a href="staff.html">Staff</a>
+      <a href="campeonato.html">Campeonato</a>
+    </div>
+  </div>
 
-  <main>
+  <div class="container">
     <h2>Servidor BRASIL</h2>
-    <p>Comunidade competitiva e organizada</p>
+    <p>Comunidade competitiva, organizada e ativa</p>
 
-    <!-- BOTÃO DO DISCORD -->
-    <a href="https://discord.gg/snn5wSmvxg"
-       class="btn-discord"
-       target="_blank">
+    <!-- BOTÃO FUNCIONAL -->
+    <a class="discord-btn"
+       href="https://discord.gg/snn5wSmvxg"
+       target="_blank"
+       rel="noopener noreferrer">
        Entrar no Discord
     </a>
-  </main>
-
-  <footer>
-    © 2026 BRASIL
-  </footer>
+  </div>
 
 </body>
 </html>
+
