@@ -1,115 +1,102 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <title>BRASIL</title>
+<meta charset="UTF-8">
+<title>Min Loja</title>
 
-  <style>
-/* CORES PRINCIPAIS */
-:root {
-  --azul: #1e90ff;
-  --azul-escuro: #1873cc;
-  --branco: #ffffff;
-  --cinza: #f2f2f2;
-  --texto: #111111;
-}
-
-/* FUNDO GERAL */
+<style>
+/* RESET SIMPLES */
 body {
-  background-color: var(--cinza);
-  color: var(--texto);
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f2f6ff;
 }
 
-/* TOPO / INÍCIO */
-header, .header, nav {
-  background-color: var(--azul);
-  color: var(--branco);
+/* TOPO */
+header {
+  background: #1e90ff;
+  padding: 15px 30px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
-/* TEXTOS DO TOPO */
-header h1,
-header h2,
-nav a {
-  color: var(--branco);
-}
-
-/* CARDS / BLOCOS */
-.card, .produto {
-  background-color: var(--branco);
-  border: 1px solid #ddd;
-}
-
-/* TÍTULOS */
-h1, h2, h3 {
-  color: var(--texto);
-}
-
-/* BOTÃO COMPRAR */
-.buy, button {
-  background-color: var(--azul);
-  color: var(--branco);
-  border: none;
-  cursor: pointer;
-}
-
-/* HOVER BOTÃO */
-.buy:hover, button:hover {
-  background-color: var(--azul-escuro);
-}
-
-/* LINKS */
-a {
-  color: var(--azul);
+/* LINKS DO TOPO */
+header a {
+  color: white;
   text-decoration: none;
+  font-weight: bold;
+  margin-left: 15px;
 }
 
-a:hover {
-  text-decoration: underline;
+/* BOTÃO DISCORD */
+.discord-btn {
+  background: white;
+  color: #1e90ff;
+  padding: 12px 25px;
+  border-radius: 8px;
+  font-weight: bold;
 }
 
-/* MODAL / PAGAMENTO */
-.modal, .pagamento {
-  background-color: var(--branco);
-  color: var(--texto);
+/* CONTEÚDO CENTRAL */
+main {
+  height: calc(100vh - 70px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-/* FECHAR */
-.fechar {
-  color: var(--azul);
+/* CARD CENTRAL */
+.card {
+  background: white;
+  padding: 40px;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0 0 20px rgba(0,0,0,0.1);
+}
+
+/* BOTÃO GRANDE */
+.card a {
+  display: inline-block;
+  margin-top: 20px;
+  background: #1e90ff;
+  color: white;
+  padding: 15px 35px;
+  border-radius: 10px;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.card a:hover {
+  background: #1873cc;
 }
 </style>
-
 </head>
 
 <body>
 
-  <div class="menu">
-    <h1>BRASIL</h1>
-    <div>
-      <a href="index.html">Início</a>
-      <a href="loja.html">Loja</a>
-    </div>
+<header>
+  <div>
+    <a href="index.html">Início</a>
+    <a href="loja.html">Loja</a>
   </div>
 
-  <div class="container">
-    <h2>Servidor BRASIL</h2>
-    <p>Comunidade competitiva, organizada e ativa</p>
+  <a class="discord-btn" href="https://discord.gg/snn5wSmvxg" target="_blank">
+    Entrar no Discord
+  </a>
+</header>
 
-    <!-- BOTÃO FUNCIONAL -->
-    <a class="discord-btn"
-       href="https://discord.gg/snn5wSmvxg"
-       target="_blank"
-       rel="noopener noreferrer">
-       Entrar no Discord
+<main>
+  <div class="card">
+    <h1>Bem-vindo à Min Loja</h1>
+    <p>Otimizações, cursos e gift cards</p>
+
+    <a href="https://discord.gg/snn5wSmvxg" target="_blank">
+      Entrar no Discord
     </a>
   </div>
+</main>
 
 </body>
 </html>
-
-
-
-
-
-
-
