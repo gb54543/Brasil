@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<title>Pagamento - BRASIL</title>
+
+<style>
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #0b0b0b;
+  color: white;
+  text-align: center;
+}
+
+.container {
+  max-width: 500px;
+  margin: 80px auto;
+  background: #111;
+  padding: 30px;
+  border-radius: 10px;
+}
+
+h1 {
+  color: #b30000;
+}
+
+.pix {
+  background: #000;
+  padding: 15px;
+  border-radius: 8px;
+  margin: 15px 0;
+  word-break: break-all;
+}
+
+.obs {
+  font-size: 14px;
+  color: #ccc;
+  margin-top: 20px;
+}
+
+img {
+  margin-top: 20px;
+  width: 220px;
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+  <h1>Pagamento via PIX</h1>
+
+  <p><strong>Produto:</strong></p>
+  <p id="produto"></p>
+
+  <div class="pix">
+    <strong>PIX:</strong><br>
+    SEU_PIX_AQUI
+  </div>
+
+  <img src="qrcode-pix.png" alt="QR Code PIX">
+
+  <div class="obs">
+    OBS: Após o pagamento, guarde o comprovante.<br>
+    A entrega será feita conforme informado.
+  </div>
+</div>
+
+<script>
+const params = new URLSearchParams(window.location.search);
+document.getElementById("produto").innerText =
+  params.get("produto") || "Produto não informado";
+</script>
+
+</body>
+</html>
