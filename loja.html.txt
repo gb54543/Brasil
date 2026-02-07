@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Loja - BRASIL</title>
+
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #0b0b0b;
+      color: white;
+    }
+
+    header {
+      background: #000;
+      padding: 15px 40px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    header h1 {
+      color: #b30000;
+      margin: 0;
+      font-size: 22px;
+    }
+
+    header nav a {
+      color: white;
+      margin-left: 20px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    header nav a:hover {
+      color: #b30000;
+    }
+
+    .container {
+      max-width: 1100px;
+      margin: 60px auto;
+      padding: 0 20px;
+    }
+
+    .container h2 {
+      color: #b30000;
+      margin-bottom: 30px;
+      text-align: center;
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 25px;
+    }
+
+    .card {
+      background: #111;
+      border-radius: 10px;
+      padding: 25px;
+      text-align: center;
+      box-shadow: 0 0 15px rgba(0,0,0,0.7);
+    }
+
+    .card h3 {
+      margin-top: 0;
+      color: #fff;
+    }
+
+    .card p {
+      color: #aaa;
+      font-size: 14px;
+      margin: 15px 0;
+    }
+
+    .price {
+      font-size: 22px;
+      color: #b30000;
+      margin: 15px 0;
+      font-weight: bold;
+    }
+
+    .card a {
+      display: inline-block;
+      margin-top: 10px;
+      padding: 12px 22px;
+      background: #5865F2;
+      color: white;
+      border-radius: 6px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .card a:hover {
+      opacity: 0.9;
+    }
+
+    footer {
+      margin-top: 80px;
+      text-align: center;
+      color: #555;
+      font-size: 13px;
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <h1>BRASIL</h1>
+  <nav>
+    <a href="index.html">Início</a>
+    <a href="loja.html">Loja</a>
+    <a href="campeonato.html">Campeonato</a>
+  </nav>
+</header>
+
+<div class="container">
+
+  <!-- OTIMIZAÇÕES -->
+  <h2>⚙️ Otimizações</h2>
+  <div class="cards">
+    <div class="card">
+      <h3>Otimização Básica</h3>
+      <p>Melhora FPS, reduz input lag e deixa o PC mais estável.</p>
+      <div class="price">R$ 25,00</div>
+      <a href="https://discord.gg/snn5wSmvxg" target="_blank">Comprar no Discord</a>
+    </div>
+
+    <div class="card">
+      <h3>Otimização Avançada</h3>
+      <p>FPS máximo, ajustes profundos e foco em competitivo.</p>
+      <div class="price">R$ 50,00</div>
+      <a href="https://discord.gg/snn5wSmvxg" target="_blank">Comprar no Discord</a>
+    </div>
+  </div>
+
+  <!-- CONTAS -->
+  <h2 style="margin-top: 70px;">👤 Contas</h2>
+  <div class="cards">
+    <div class="card">
+      <h3>Conta Full Acesso</h3>
+      <p>Conta verificada, pronta para uso imediato.</p>
+      <div class="price">R$ 80,00</div>
+      <a href="https://discord.gg/snn5wSmvxg" target="_blank">Comprar no Discord</a>
+    </div>
+
+    <div class="card">
+      <h3>Conta Semi Full</h3>
+      <p>Ótimo custo-benefício para quem quer economizar.</p>
+      <div class="price">R$ 45,00</div>
+      <a href="https://discord.gg/snn5wSmvxg" target="_blank">Comprar no Discord</a>
+    </div>
+  </div>
+
+  <!-- GIFT CARDS -->
+  <h2 style="margin-top: 70px;">🎁 Gift Cards</h2>
+  <div class="cards">
+    <div class="card">
+      <h3>Gift Card R$50</h3>
+      <p>Entrega rápida e segura.</p>
+      <div class="price">R$ 50,00</div>
+      <a href="https://discord.gg/snn5wSmvxg" target="_blank">Comprar no Discord</a>
+    </div>
+
+    <div class="card">
+      <h3>Gift Card R$100</h3>
+      <p>Ideal para compras maiores.</p>
+      <div class="price">R$ 100,00</div>
+      <a href="https://discord.gg/snn5wSmvxg" target="_blank">Comprar no Discord</a>
+    </div>
+  </div>
+
+</div>
+
+<footer>
+  © 2026 BRASIL — Todos os direitos reservados
+</footer>
+
+</body>
+</html>
