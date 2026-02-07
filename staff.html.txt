@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Staff | BRASIL</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav>
+  <h1>BRASIL</h1>
+  <ul>
+    <li><a href="index.html">Início</a></li>
+    <li><a href="staff.html">Staff</a></li>
+    <li><a href="campeonato.html">Campeonato</a></li>
+  </ul>
+</nav>
+
+<section>
+  <h3>Equipe do Servidor</h3>
+
+  <div class="card">
+    <h4>Dono</h4>
+    <p>Responsável geral pelo servidor</p>
+  </div>
+
+  <div class="card">
+    <h4>Administrador</h4>
+    <p>Gerenciamento e decisões importantes</p>
+  </div>
+
+  <div class="card">
+    <h4>Moderador</h4>
+    <p>Organização e suporte aos membros</p>
+  </div>
+
+</section>
+
+<footer>
+  <p>© 2026 BRASIL</p>
+</footer>
+
+</body>
+</html>

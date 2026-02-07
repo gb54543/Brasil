@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>BRASIL</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav>
+  <h1>BRASIL</h1>
+  <ul>
+    <li><a href="index.html">Início</a></li>
+    <li><a href="staff.html">Staff</a></li>
+    <li><a href="campeonato.html">Campeonato</a></li>
+  </ul>
+</nav>
+
+<header class="hero">
+  <h2>Servidor BRASIL</h2>
+  <p>Comunidade competitiva. Organização. Respeito.</p>
+  <a class="btn" href="#">Entrar no Discord</a>
+</header>
+
+<section>
+  <h3>Sobre o Servidor</h3>
+  <p>
+    O BRASIL é um servidor focado em competitividade, eventos organizados
+    e uma staff ativa. Aqui o jogo é sério.
+  </p>
+</section>
+
+<footer>
+  <p>© 2026 BRASIL — Todos os direitos reservados</p>
+</footer>
+
+</body>
+</html>
