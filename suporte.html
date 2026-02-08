@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Suporte - Seu Site</title>
+    <title>Suporte</title>
+
     <style>
         * {
             margin: 0;
@@ -13,11 +14,11 @@
         }
 
         body {
-            background-color: #1c1c1c; /* fundo preto claro */
-            color: #f5f5f5; /* texto principal */
+            background-color: #1c1c1c;
+            color: #f5f5f5;
+            min-height: 100vh;
             display: flex;
             flex-direction: column;
-            min-height: 100vh;
         }
 
         header {
@@ -34,51 +35,41 @@
 
         header h1 {
             font-size: 28px;
-            color: #e11d48; /* Suporte grande em rosa escuro */
+            color: #d94a9b; /* rosa escuro */
         }
 
-        .top-nav {
+        nav {
             margin-left: auto;
             display: flex;
             gap: 20px;
         }
 
-        .top-nav a {
-            color: #f5f5f5;
+        nav a {
+            color: #fff;
             text-decoration: none;
             font-weight: bold;
             padding: 8px 15px;
             border-radius: 6px;
-            transition: background-color 0.3s, color 0.3s;
         }
 
-        .top-nav a:hover {
+        nav a:hover {
             background-color: #3a7bd5; /* azul escuro */
-            color: #fff;
         }
 
         main {
-            flex: 1;
-            padding: 40px 20px;
             max-width: 900px;
             margin: 0 auto;
+            padding: 40px 20px;
+            flex: 1;
         }
 
         h2 {
-            margin-bottom: 20px;
-            color: #3a7bd5; /* destaque azul */
-        }
-
-        p {
+            color: #3a7bd5;
             margin-bottom: 15px;
-            line-height: 1.6;
-        }
-
-        .form-container {
-            margin-top: 30px;
         }
 
         form {
+            margin-top: 25px;
             display: flex;
             flex-direction: column;
             gap: 15px;
@@ -86,50 +77,25 @@
 
         input, textarea {
             padding: 12px;
+            background-color: #2c2c2c;
             border: none;
             border-radius: 8px;
-            background-color: #2c2c2c;
-            color: #f5f5f5;
+            color: #fff;
             font-size: 16px;
-        }
-
-        input::placeholder, textarea::placeholder {
-            color: #aaa;
         }
 
         button {
             padding: 12px;
-            background-color: #3a7bd5; /* azul escuro */
+            background-color: #3a7bd5;
+            color: #fff;
+            font-weight: bold;
             border: none;
             border-radius: 8px;
-            font-weight: bold;
             cursor: pointer;
-            color: #fff;
-            transition: background-color 0.3s;
         }
 
         button:hover {
-            background-color: #2b5ca3; /* azul escuro hover */
-        }
-
-        .nav-links {
-            margin-top: 40px;
-            display: flex;
-            gap: 20px;
-        }
-
-        .nav-links a {
-            padding: 12px;
-            background-color: #3a7bd5; /* azul escuro */
-            border-radius: 8px;
-            font-weight: bold;
-            text-decoration: none;
-            color: #fff;
-            transition: background-color 0.3s;
-        }
-
-        .nav-links a:hover {
-            background-color: #2b5ca3; /* azul escuro hover */
+            background-color: #2b5ca3;
         }
 
         footer {
@@ -142,45 +108,52 @@
     </style>
 </head>
 <body>
-    <header>
-        <img src="logo-br.png" alt="Logo">
-        <h1>Suporte</h1>
-        <nav class="top-nav">
-            <a href="index.html">Início</a>
-            <a href="loja.html">Loja</a>
-        </nav>
-    </header>
 
-    <main>
-        <h2>Precisa de ajuda?</h2>
-        <p>Se você tiver qualquer problema ou dúvida, preencha o formulário abaixo e nossa equipe irá responder o mais rápido possível.</p>
-        
-        <div class="form-container">
-            <form id="suporteForm">
-                <input type="text" name="nome" placeholder="Seu nome" required>
-                <input type="email" name="email" placeholder="Seu email" required>
-                <textarea name="mensagem" rows="6" placeholder="Descreva seu problema ou dúvida" required></textarea>
-                <button type="submit">Enviar</button>
-            </form>
-        </div>
+<header>
+    <img src="logo-escura.png" alt="Logo">
+    <h1>Suporte</h1>
+    <nav>
+        <a href="index.html">Início</a>
+        <a href="loja.html">Loja</a>
+    </nav>
+</header>
 
-        <div class="nav-links">
-            <a href="index.html">Voltar para Início</a>
-            <a href="loja.html">Ir para Loja</a>
-        </div>
-    </main>
+<main>
+    <h2>Precisa de ajuda?</h2>
+    <p>Preencha o formulário abaixo e fale direto com nosso suporte pelo WhatsApp.</p>
 
-    <footer>
-        &copy; 2026 Brasil. Todos os direitos reservados.
-    </footer>
+    <form id="suporteForm">
+        <input type="text" id="nome" placeholder="Seu nome" required>
+        <input type="email" id="email" placeholder="Seu email" required>
+        <textarea id="mensagem" rows="5" placeholder="Descreva seu problema" required></textarea>
+        <button type="submit">Enviar para WhatsApp</button>
+    </form>
+</main>
 
-    <script>
-        document.getElementById('suporteForm').addEventListener('submit', function(e){
-            e.preventDefault();
-            alert('Mensagem enviada com sucesso!');
-            this.reset();
-        });
-    </script>
+<footer>
+    &copy; 2026 Gift Hub. Todos os direitos reservados.
+</footer>
+
+<script>
+document.getElementById("suporteForm").addEventListener("submit", function(e) {
+    e.preventDefault();
+
+    const nome = document.getElementById("nome").value;
+    const email = document.getElementById("email").value;
+    const mensagem = document.getElementById("mensagem").value;
+
+    const texto =
+`📩 Suporte Gift Hub
+👤 Nome: ${nome}
+📧 Email: ${email}
+💬 Mensagem: ${mensagem}`;
+
+    const numero = "5534996555409"; // TROQUE AQUI
+    const url = `https://wa.me/${numero}?text=${encodeURIComponent(texto)}`;
+
+    window.open(url, "_blank");
+});
+</script>
+
 </body>
 </html>
-
