@@ -15,7 +15,7 @@
         }
 
         body {
-            background-color: #1c1c1c; /* preto claro */
+            background-color: #1c1c1c; /* fundo preto claro */
             color: #f5f5f5; /* texto claro para contraste */
             display: flex;
             flex-direction: column;
@@ -23,7 +23,7 @@
         }
 
         header {
-            background-color: #111; /* header mais escuro */
+            background-color: #111;
             padding: 20px;
             display: flex;
             align-items: center;
@@ -79,7 +79,7 @@
             color: #aaa;
         }
 
-        button {
+        button, .nav-button {
             padding: 12px;
             background-color: #f0a500;
             border: none;
@@ -88,10 +88,19 @@
             cursor: pointer;
             color: #111;
             transition: background-color 0.3s;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
         }
 
-        button:hover {
+        button:hover, .nav-button:hover {
             background-color: #d18e00;
+        }
+
+        .nav-links {
+            margin-top: 40px;
+            display: flex;
+            gap: 20px;
         }
 
         footer {
@@ -120,6 +129,11 @@
                 <textarea name="mensagem" rows="6" placeholder="Descreva seu problema ou dúvida" required></textarea>
                 <button type="submit">Enviar</button>
             </form>
+        </div>
+
+        <div class="nav-links">
+            <a class="nav-button" href="index.html">Voltar para Início</a>
+            <a class="nav-button" href="loja.html">Ir para Loja</a>
         </div>
     </main>
 
