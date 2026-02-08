@@ -2,74 +2,87 @@
 <html lang="pt-BR">
 <head>
 <meta charset="UTF-8">
-<title>BRASIL APP</title>
+<title>BRASIL</title>
 
 <style>
-/* RESET SIMPLES */
-body {
+* {
   margin: 0;
+  padding: 0;
+  box-sizing: border-box;
   font-family: Arial, sans-serif;
-  background: #f2f6ff;
 }
 
-/* TOPO */
+body {
+  background: #0b0b0b;
+  color: white;
+}
+
+/* HEADER */
 header {
-  background: #1e90ff;
-  padding: 15px 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 60px;
+}
+
+header h1 {
+  color: #e11d48;
+  font-size: 26px;
+}
+
+nav a {
+  color: white;
+  margin-left: 25px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+nav a:hover {
+  color: #6366f1;
+}
+
+/* HERO */
+.hero {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  padding: 80px 60px;
+  min-height: 80vh;
 }
 
-/* LINKS DO TOPO */
-header a {
-  color: white;
-  text-decoration: none;
-  font-weight: bold;
-  margin-left: 15px;
+.hero-text {
+  max-width: 520px;
 }
 
-/* BOTÃO DISCORD */
+.hero-text h2 {
+  font-size: 38px;
+  margin-bottom: 20px;
+}
+
+.hero-text p {
+  color: #ccc;
+  font-size: 16px;
+  line-height: 1.6;
+  margin-bottom: 30px;
+}
+
 .discord-btn {
-  background: white;
-  color: #1e90ff;
-  padding: 12px 25px;
-  border-radius: 8px;
-  font-weight: bold;
-}
-
-/* CONTEÚDO CENTRAL */
-main {
-  height: calc(100vh - 70px);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-/* CARD CENTRAL */
-.card {
-  background: white;
-  padding: 40px;
-  border-radius: 12px;
-  text-align: center;
-  box-shadow: 0 0 20px rgba(0,0,0,0.1);
-}
-
-/* BOTÃO GRANDE */
-.card a {
   display: inline-block;
-  margin-top: 20px;
-  background: #1e90ff;
+  padding: 14px 28px;
+  background: #6366f1;
   color: white;
-  padding: 15px 35px;
-  border-radius: 10px;
   text-decoration: none;
-  font-size: 18px;
+  border-radius: 6px;
   font-weight: bold;
 }
 
-.card a:hover {
-  background: #1873cc;
+.discord-btn:hover {
+  opacity: 0.9;
+}
+
+/* IMAGEM */
+.hero-img img {
+  max-width: 420px;
 }
 </style>
 </head>
@@ -77,26 +90,30 @@ main {
 <body>
 
 <header>
-  <div>
+  <h1>BRASIL</h1>
+  <nav>
     <a href="index.html">Início</a>
     <a href="loja.html">Loja</a>
-  </div>
-
+  </nav>
 </header>
 
-<main>
-  <div class="card">
-    <h1>Bem-vindo ao nosso site!</h1>
-    <p>Temos Otimizações, cursos, gift cards e uma comunidade muito top!!!</p>
+<section class="hero">
+  <div class="hero-text">
+    <h2>Servidor competitivo BRASIL</h2>
+    <p>
+      Comunidade focada em Fortnite competitivo, evolução real,
+      organização e suporte para jogadores que querem subir de nível.
+    </p>
 
-    <a href="https://discord.gg/snn5wSmvxg" target="_blank">
+    <a class="discord-btn" href="https://discord.gg/snn5wSmvxg" target="_blank">
       Entrar no Discord
     </a>
   </div>
-</main>
+
+  <div class="hero-img">
+    <img src="pele.png" alt="Skin Fortnite">
+  </div>
+</section>
 
 </body>
 </html>
-
-
-
