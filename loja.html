@@ -8,33 +8,32 @@
 body {
   margin: 0;
   font-family: Arial, sans-serif;
-  background: #f4f6f8;
-  color: #111827;
+  background: radial-gradient(circle at top, #111 0%, #000 70%);
+  color: #ffffff;
 }
 
 header {
-  background: #ffffff;
+  background: #000;
   padding: 15px 40px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  border-bottom: 1px solid #e5e7eb;
 }
 
 header h1 {
-  color: #2563eb;
+  color: #e11d48; /* BRASIL vermelho */
   margin: 0;
 }
 
 header nav a {
-  color: #111827;
+  color: #ffffff;
   margin-left: 20px;
   text-decoration: none;
   font-weight: bold;
 }
 
 header nav a:hover {
-  color: #2563eb;
+  color: #6366f1; /* roxo igual botão */
 }
 
 .container {
@@ -44,7 +43,7 @@ header nav a:hover {
 }
 
 h2 {
-  color: #2563eb;
+  color: #ffffff;
   text-align: center;
   margin-bottom: 30px;
 }
@@ -56,21 +55,26 @@ h2 {
 }
 
 .card {
-  background: #ffffff;
+  background: #0b0b0b;
   padding: 25px;
   border-radius: 12px;
   text-align: center;
-  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+  box-shadow: 0 0 25px rgba(0,0,0,0.6);
+  border: 1px solid #111;
+}
+
+.card h3 {
+  color: #ffffff;
 }
 
 .card p {
-  color: #6b7280;
+  color: #c7c7c7;
   font-size: 14px;
 }
 
 .price {
   font-size: 22px;
-  color: #2563eb;
+  color: #ffffff;
   margin: 15px 0;
   font-weight: bold;
 }
@@ -78,20 +82,21 @@ h2 {
 .buy {
   display: inline-block;
   padding: 12px 22px;
-  background: #2563eb;
+  background: #6366f1; /* roxo do botão */
   color: white;
   text-decoration: none;
   border-radius: 8px;
   font-weight: bold;
+  transition: 0.2s;
 }
 
 .buy:hover {
-  background: #1d4ed8;
+  background: #4f46e5;
 }
 
 .note {
   font-size: 12px;
-  color: #6b7280;
+  color: #9ca3af;
   margin-top: 10px;
 }
 
@@ -100,24 +105,6 @@ footer {
   text-align: center;
   color: #6b7280;
   font-size: 13px;
-}
-  /* ESCONDER OBS E PIX QUE ESTÃO APARECENDO SOZINHOS */
-p:has(strong),
-button {
-  display: none;
-}
-  /* ESCONDER TUDO QUE É DE PAGAMENTO NA LOJA */
-.obs,
-.pix,
-.pagamento,
-.fechar,
-.close,
-#fechar,
-#pagamento,
-button,
-.modal,
-.overlay {
-  display: none !important;
 }
 </style>
 
@@ -276,6 +263,7 @@ function fechar() {
 
 </body>
 </html>
+
 
 
 
